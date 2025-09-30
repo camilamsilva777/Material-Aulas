@@ -82,3 +82,48 @@ section {
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
+/* 7. Animação de digitação */
+.typing {
+  font-family: monospace;
+  font-size: 28px;
+  border-right: 2px solid black; /* cursor */
+  white-space: nowrap; /* impede quebra de linha */
+  overflow: hidden; /* esconde o texto que ainda não "saiu" */
+  width: 0; /* começa invisível */
+  animation: typing 3s steps(12) forwards, blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 12ch; } /* 12 caracteres = "Olá, mundo!" */
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+
+/* Exercício 1 */
+.like {
+  font-size: 40px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* Exercício 2 */
+.progress-container {
+  width: 300px;
+  height: 30px;
+  border: 2px solid #333;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 20px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+}
